@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="logo">Custom Dashboard</div>
+        <div class="search-bar">
+            <input type="text" placeholder="search">
+            <div class="fa fa-search"></div>
+        </div>
+        <div class="nav-icons">
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </nav>
+
+    <div class="side-panel">
+        <div class="btn-cont">
+            <button id="add-btn">Add</button>
+            <button id="create-btn">Create</button>
+        </div>
+        <ul class="side-bar side-bar-links-1">
+            <li class="side-bar-items"><a href="#">All</a></li>
+            <li class="side-bar-items"><a href="#">Recent</a></li>
+            <li class="side-bar-items"><a href="#">Starred</a></li>
+        </ul>
+        <ul class="side-bar side-bar-links-2">
+            <li class="side-bar-items" id="test-demo-btn"><a href="#">Test Demo</a></li>
+            <li class="side-bar-items" id="page-builder-demo-btn"><a href="#">Page Builder Demo</a></li>
+            <li class="side-bar-items" id="metabase-btn"><a href="#">Metabase</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="group-cont">
+            <h2 class="group-header" id="group-header">All</h2>
+            <div class="filter-bar">
+                <input type="text" id="filter-search" placeholder="filter">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        <div class="cards-cont" id="cards-cont"></div>
+    </div>
+
+    <div class="modal-bg">
+        <div class="modal-window">
+            <div class="close">X</div>
+
+            <form>
+                <label for="dashboard-type">Dashboard Type</label>
+                <select name="dashboard-type" id="dashboard-type">
+                    <option value="">Select</option>
+                    <!-- <option value="">Select</option>
+                    <option value="">Select</option> -->
+                </select>
+
+                <label for="dashboard-group">Dashboard Group</label>
+                <select name="dashboard-group" id="dashboard-group">
+                    <option value="">Select</option>
+                    <option value="Test Demo">Test Demo</option>
+                    <option value="Page Builder Demo">Page Builder Demo</option>
+                    <option value="Metabase">Metabase</option>
+                </select>
+
+                <label for="dashboard-name">Dashboard Name</label>
+                <select name="dashboard-name" id="dashboard-name">
+                    <option value="">Select</option>
+                    <option value="Dashboard 1">Dashboard 1</option>
+                    <option value="Dashboard 2">Dashboard 2</option>
+                    <option value="Dashboard 3">Dashboard 3</option>
+                    <option value="Dashboard 4">Dashboard 4</option>
+                </select>
+
+                <label for="dashboard-id">Dashboard ID</label>
+                <select name="dashboard-id" id="dashboard-id">
+                    <option value="">Select</option>
+                    <option value="ID 1">ID 1</option>
+                    <option value="ID 2">ID 2</option>
+                    <option value="ID 3">ID 3</option>
+                    <option value="ID 4">ID 4</option>
+                </select>
+
+                <label for="role-id">Role ID</label>
+                <select name="role-id" id="role-id">
+                    <option value="">Select</option>
+                    <option value="admin">Admin</option>
+                    <option value="systemadmin">System Admin</option>
+                    <option value="user">User</option>
+                </select>
+            </form>
+
+            <div class="save-btn">
+                <input type="button" id="cancel-btn" value="Cancel">
+                <input type="submit" id="save-btn" value="Save">
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>
